@@ -17,10 +17,10 @@
 TARGET_BOOTLOADER_BOARD_NAME := walleye
 DEFAULT_LOW_PERSISTENCE_MODE_BRIGHTNESS := 0x00000056
 
-include device/google/wahoo/BoardConfig.mk
+include device/google/walleye-wahoo/BoardConfig.mk
 -include vendor/google/walleye/BoardConfigVendor.mk
 
-TARGET_KERNEL_CONFIG := flash-walleye_defconfig
+TARGET_KERNEL_CONFIG := wahoo_defconfig
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 
 #sepolicy common to muskie/walleye
@@ -29,4 +29,4 @@ BOARD_SEPOLICY_DIRS += device/google/walleye/sepolicy
 # Testing related defines
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/wahoo-setup.sh
 
-BOARD_LISA_TARGET_SCRIPTS := device/google/wahoo/lisa/
+BOARD_LISA_TARGET_SCRIPTS := device/google/walleye-wahoo/lisa/

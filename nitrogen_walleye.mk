@@ -3,15 +3,16 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Inherit some common AICP stuff.
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+$(call inherit-product, vendor/nitrogen/products/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/walleye/aosp_walleye.mk)
 
--include device/google/wahoo/device-lineage.mk
+-include device/google/walleye-wahoo/device-lineage.mk
 
-## Device identifier. This must come after all inclusions
-PRODUCT_NAME := aicp_walleye
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := walleye
+PRODUCT_NAME := nitrogen_walleye
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 2
 TARGET_MANUFACTURER := Google
